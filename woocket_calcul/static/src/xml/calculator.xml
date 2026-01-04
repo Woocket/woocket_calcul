@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+  <t t-name="SystrayCalculatorTool" owl="1">
+    <li style="list-style-type: none;" t-ref="root" t-att-class="state.visible ? 'calcsystray-item calcsystray-open' : 'calcsystray-item'">
+
+      <button class="calcsystray-button calcsystray-btn" t-on-click="toggleVisibility">
+        <i class="fa fa-calculator"/>
+      </button>
+      <t t-if="state.visible">
+	   <div class="calcsystray-panel">
+
+        <div class="calcsystray-display-container">
+          <input type="text" class="calcsystray-display" t-att-value="state.display" readonly="1"/>
+        </div>
+        <div class="calcsystray-buttons-grid">
+          <button class="calcsystray-btn" data-digit="7" t-on-click="onNumberClick">7</button>
+          <button class="calcsystray-btn" data-digit="8" t-on-click="onNumberClick">8</button>
+          <button class="calcsystray-btn" data-digit="9" t-on-click="onNumberClick">9</button>
+          <button class="calcsystray-btn calcsystray-operator" data-op="+" t-on-click="onOperatorClick">+</button>
+
+          <button class="calcsystray-btn" data-digit="4" t-on-click="onNumberClick">4</button>
+          <button class="calcsystray-btn" data-digit="5" t-on-click="onNumberClick">5</button>
+          <button class="calcsystray-btn" data-digit="6" t-on-click="onNumberClick">6</button>
+          <button class="calcsystray-btn calcsystray-operator" data-op="-" t-on-click="onOperatorClick">-</button>
+
+          <button class="calcsystray-btn" data-digit="1" t-on-click="onNumberClick">1</button>
+          <button class="calcsystray-btn" data-digit="2" t-on-click="onNumberClick">2</button>
+          <button class="calcsystray-btn" data-digit="3" t-on-click="onNumberClick">3</button>
+          <button class="calcsystray-btn calcsystray-operator" data-op="*" t-on-click="onOperatorClick">×</button>
+
+          <button class="calcsystray-btn" data-digit="0" t-on-click="onNumberClick">0</button>
+          <button class="calcsystray-btn" data-digit="." t-on-click="onNumberClick">.</button>
+          <button class="calcsystray-btn calcsystray-clear" t-on-click="onClearClick">C</button>
+          <button class="calcsystray-btn calcsystray-operator" data-op="/" t-on-click="onOperatorClick">÷</button>
+
+          <button class="calcsystray-btn calcsystray-operator" data-op="%" t-on-click="onOperatorClick">%</button>
+          <button class="calcsystray-btn calcsystray-sign" t-on-click="onToggleSign">±</button>
+  		  <button class="calcsystray-btn calcsystray-equals calcsystray-span-2" t-on-click="onEqualsClick">=</button>
+        </div>
+      </div>
+	 </t>
+    </li>
+  </t>
+</templates>

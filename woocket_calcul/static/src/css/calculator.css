@@ -1,0 +1,96 @@
+.calcsystray-item {
+  position: relative;
+}
+
+.calcsystray-button {
+  background: none;
+  border: none;
+  color: #333;
+  padding: 0 0.5rem;
+  cursor: pointer;
+}
+.calcsystray-button:hover {
+  color: #000;
+}
+
+.calcsystray-panel {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.2);
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  width: 16rem;
+  z-index: 1000;
+}
+
+.calcsystray-display-container {
+  margin-bottom: 0.5rem;
+}
+.calcsystray-display {
+  width: 100%;
+  font-size: 1.4rem;
+  padding: 0.4rem;
+  text-align: right;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+.calcsystray-buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.35rem;
+}
+.calcsystray-span-2 {
+  grid-column: span 2;
+}
+.calcsystray-sign {
+  background: #6c757d;
+  color: #fff;
+}
+.calcsystray-sign:hover {
+  background: #5a6268;
+}
+
+.calcsystray-empty {
+  visibility: hidden;
+}
+
+.calcsystray-btn {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.2rem;
+  background: #e0e0e0;
+  color: #333;
+  cursor: pointer;
+}
+.calcsystray-btn:hover {
+  background: #d0d0d0;
+}
+
+.calcsystray-operator {
+  background: #f0a10a;
+  color: #fff;
+}
+.calcsystray-operator:hover {
+  background: #e59400;
+}
+.calcsystray-clear {
+  background: #d9534f;
+  color: #fff;
+}
+.calcsystray-clear:hover {
+  background: #c9302c;
+}
+.calcsystray-equals {
+  background: #5cb85c;
+  color: #fff;
+}
+.calcsystray-equals:hover {
+  background: #4cae4c;
+}
